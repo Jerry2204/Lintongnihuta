@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Balasan;
 use App\BalasKomentar;
+use App\Informasi;
 use App\Pengunjung;
 use Illuminate\Http\Request;
 
 class PengunjungController extends Controller
 {
-    public function komentar(Request $request, Pengunjung $pengunjung)
+    public function komentar(Request $request, Pengunjung $pengunjung, $id_informasi)
     {
         $this->validate($request, [
            'nama' => 'required',
@@ -17,8 +18,12 @@ class PengunjungController extends Controller
            'komentar' => 'required'
         ]);
 
-        $pengunjung->create($request->all());
-        return redirect('/')->with('sukses', 'Komentar Berhasil dikirimkan');
+        $pengunjung->nama = $request->nama;
+        $pengunjung->alamat = $request->alamat;
+        $pengunjung->komentar = $request->komentar;
+        $pengunjung->informasi_id_informasi = $id_informasi;
+        $pengunjung->save();
+        return back()->with('sukses', 'Komentar Berhasil dikirimkan');
     }
 
     public function balasKomentar(Pengunjung $id)

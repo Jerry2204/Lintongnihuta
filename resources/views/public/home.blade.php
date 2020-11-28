@@ -8,95 +8,88 @@
     <link rel="stylesheet" href="/package/css/swiper.css">
 
     <style>
-        .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .swiper-slide {
-    background-position: center;
-    background: #122436;
-    background-size: cover;
-    border-radius: 10px;
-    width: 300px;
-    height: 380px;
+        background-position: center;
+        background: #122436;
+        background-size: cover;
+        border-radius: 10px;
+        width: 300px;
+        height: 380px;
 
     }
     .swiper-slide .imgBx{
-    width: 100%;
-    height: 270px;
-    overflow: hidden;
+        width: 100%;
+        height: 270px;
+        overflow: hidden;
     }
     .swiper-slide .imgBx img{
-    width: 100%;
-    height: 100%;
+        width: 100%;
+        height: 100%;
     }
     .swiper-slide .details{
-    box-sizing: border-box;
-    font-size: 20px;
-    padding: 20px;
-    height: 10%;
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 20px;
+        height: 10%;
     }
     .swiper-slide .details h3{
-    margin: 0;
-    font-family: 'sans-serif';
-    padding: 0;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    line-height: 20px;
+        margin: 0;
+        font-family: 'sans-serif';
+        padding: 0;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        line-height: 20px;
     }
     .swiper-slide .details span{
-    font-size: 16px;
-    font-style: italic;
-    color: #f44336;
+        font-size: 16px;
+        font-style: italic;
+        color: #f44336;
+    }
+
+    .swiper-slide a{
+        font-weight: bold;
+        font-size: 12px;
+        color: #53A8FC
     }
 
     </style>
 @endsection
 
 @section('container')
-
-<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="/asset/images/singgolom.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Desa Lintong Nihuta
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active font-weight-bold">
-                <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/penginapan"><i class="fas fa-hotel"></i> Penginapan</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/gallery"><i class="fas fa-images"></i> Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about"><i class="fas fa-users"></i> About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
-            </li>
-        </ul>
-    </div>
-</div>
-</nav>
-
 <div class="container-fluid">
-<div class="row">
-    <div class="col-lg-12 jumbotron-header">
-        <div class="header-info">
-            <span class="text1">Welcome to</span>
-            <span class="text2">Desa Lintong Nihuta</span>
+    <div class="row">
+        <div class="col-lg-12 jumbotron-header">
+            <div class="header-info">
+                <span class="text1">Welcome to</span>
+                <span class="text2">Desa Lintong Nihuta</span>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 info-panel">
+            <div class="row">
+                <div class="col-lg">
+                    <img src="/asset/images/cari.png" width="150" alt="" class="float-left">
+                    <a href="" class="link-panel d-block" data-toggle="modal" data-target="#exampleModal">Cari Informasi</a>
+                </div>
+                <div class="col-lg">
+                    <img src="/asset/images/Logo trans.png" width="150" alt="" class="float-left">
+                    <a href="/about" class="link-panel d-block">Profil Desa</a>
+                    {{-- <h4>Setting</h4>
+                    <p>lorem ipsum dolor sit amet.</p> --}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {{-- <div id="carouselId" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
@@ -120,13 +113,51 @@
         </div>
     </div>
 </div> --}}
-    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1" d="M0,160L48,154.7C96,149,192,139,288,160C384,181,480,235,576,250.7C672,267,768,245,864,224C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-    </svg>
 
 <div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-9 col-md-9">
+            <h2 class="poppins mt-5 bold">Destinasi Wisata</h2>
+            <div class="divider"></div>
+            <div class="row">
+            @foreach ($wisata as $info)
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <div class="card" style="width: 100%;">
+                    <img src="/asset/images/{{ $info->gambar_info }}" height="150"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="poppins">{{ $info->judul_info }}</h5>
+                        <div class="divider"></div>
+                        {{-- <p class="card-text">{!! substr($info->isi_info, 0, 80) !!} ...</p> --}}
+                        <p class="card-text">{!! Str::words($info->isi_info, 10) !!}</p>
+                        <hr>
+                        <a href="/single_berita/{{ $info->id_informasi }}" class="poppins d-block btn btn-primary">Lihat selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-12">
+                    <a href="/allInformasi/{{ $info->category->id }}" class="teks-info link-wisata" style="text-decoration: none">Lihat Semua Informasi {{ $info->category->nama_kategori }} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <h2 class="poppins mt-5 bold">Kategori</h2>
+            <div class="divider"></div>
+            <div class="list-group">
+                @foreach ($kategori as $category)
+                    <a href="/allInformasi/{{ $category->id }}" class="list-group-item list-group-item-action poppins kategori-hover">{{ $category->nama_kategori }}</a>
+                @endforeach
+              </div>
+        </div>
+    </div>
+</div>
+{{-- <div class="container mt-4">
+    <h1 class="heading-wisata mt-5">Informasi Wisata</h1>
+    <hr>
     @foreach ($wisata as $info)
-    <div class="row justify-content-center">
+    <div class="row mt-5 justify-content-center">
         <div class="col-lg-8 col-md-7 col-10">
             <h1 class="teks-info">{{ $info->judul_info }}</h1>
             <div class="divider"></div>
@@ -142,23 +173,25 @@
     @endforeach
     <a href="/informasi/allWisata" class="teks-info float-right mb-5 link-wisata" style="text-decoration: none">Lihat Semua Informasi {{ $info->kategori }} <i class="fas fa-arrow-right"></i></a>
     <div style="clear: both"></div>
-</div>
+</div> --}}
 
 <div class="container mt-5">
+    <hr>
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="text-center teks-info">- Berita -</h3>
-            <hr class="hr-comment" width="100px">
+            <h1 class="heading-wisata">Postingan Terbaru</h1>
+            {{-- <h3 class="text-center teks-info">Berita</h3> --}}
+            {{-- <hr class="hr-comment" width="100px"> --}}
              <!-- Swiper -->
              <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach($berita as $news)
+                    @foreach($berita_terbaru as $news)
                   <div class="swiper-slide" >
                       <div class="imgBx">
                           <img class="img-thumbnail" src="/asset/images/{{ $news->gambar_info }}" alt="" srcset="">
                       </div>
                       <div class="details">
-                          <h3>{{ $news->judul_info }} <br><span> <a href="/single_berita/{{ $news->id_informasi }}" style="color: red; font-weight: bold">Read More</a></span></h3>
+                          <h3>{{ $news->judul_info }} <br><span> <a href="/single_berita/{{ $news->id_informasi }}" class="poppins">lihat selengkapnya <i class="fas fa-arrow-right"></i></a></span></h3>
                       </div>
                   </div>
                   @endforeach
@@ -170,11 +203,28 @@
     </div>
 </div>
 
-<div class="container my-4">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <form action="/informasi/cari" method="get">
+                @csrf
+                <div class="form-group">
+                    <input type="text" name="cari" id="cari" class="form-control" placeholder="Masukkan Kata kunci">
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                <button type="submit" class="btn btn-primary">Cari</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{-- <div class="container my-4">
     <div class="row">
         <div class="col-lg-10 offset-lg-1 col-md-12 shadow p-5" style="border-radius: 20px;">
-            <h1 class="text-center teks-info">Komentar</h1>
-            <hr width="100px" class="hr-comment">
+            <h1 class="heading-wisata">Komentar</h1>
             @if(session('sukses'))
             <div class="alert alert-success">{{ session('sukses') }}</div>
             @endif
@@ -206,12 +256,11 @@
         </div>
     </div>
 </div>
-<hr>
-<div class="container my-4">
+<hr> --}}
+{{-- <div class="container my-4">
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="text-center teks-info">Daftar Komentar</h3>
-            <hr width="100px" class="hr-comment mb-5">
+            <h1 class="heading-wisata">Daftar Komentar</h1>
         </div>
     </div>
         <div class="row">
@@ -220,7 +269,6 @@
                 @foreach ($komentar as $comment)
                 <h6 class="my-3">{{ $comment->nama }}</h6>
                 <p>{{ $comment->komentar }}</p>
-                {{-- <p>{{ $comment->balasan_komentar }}</p> --}}
                 <small>{{ $comment->updated_at->diffForHumans() }}</small>
                 <b class="d-block mt-3">Balasan:</b>
                 @foreach ($comment->balasan_komentar as $balasan)
@@ -231,7 +279,7 @@
             @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
     @endsection
 @section('footer')
 <script src="/asset/js/lightbox-plus-jquery.min.js"></script>
@@ -239,17 +287,6 @@
 <script src="/package/js/swiper.js"></script>
     <script>
     $(document).ready(function(){
-    $(window).scroll(function(){
-        var wintop = $(window).scrollTop();
-        if(wintop > 150){
-            $('nav').addClass('bg-dark');
-            $('nav a').addClass('text-white');
-        }
-        else{
-            $('nav').removeClass('bg-dark');
-            $('nav a').removeClass('text-white');
-        }
-    });
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,

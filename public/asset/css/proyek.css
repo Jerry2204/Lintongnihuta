@@ -10,6 +10,10 @@ footer{
     color: black;
 }
 
+.active-page{
+
+}
+
 .text-copyright{
     font-weight: bolder;
     background-color: white;
@@ -22,8 +26,17 @@ footer{
 .divider{
     width: 100px;
     height: 5px;
-    background-color: red;
+    background-color: black;
     margin-bottom: 20px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.kategori-hover:hover{
+    background-color: #0275d8;
+    color: white;
 }
 
 .divider-footer{
@@ -33,12 +46,8 @@ footer{
     margin-bottom: 20px;
 }
 
-.link-wisata{
-    color: red;
-}
-
 .link-wisata:hover{
-    color: green;
+    color: black;
 }
 
 .link-wisata:active{

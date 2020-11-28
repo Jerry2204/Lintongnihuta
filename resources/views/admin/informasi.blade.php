@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-xs-10">
             @if(session('sukses'))
             <div class="alert alert-success">{{ session('sukses') }}</div>
             @endif
@@ -40,18 +40,17 @@
                         <th>No</th>
                         <th>Judul Informasi</th>
                         <th>Kategori</th>
-                        <th width="600px">Isi Informasi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($info as $informasi)
                     <tr>
-                        <td style="width: 5%">{{ $loop->iteration }}</td>
-                        <td style="width: 20%">{{ $informasi->judul_info }}</td>
-                        <td style="width: 10%">{{ $informasi->kategori }}</td>
-                        <td style="width: 50%">{{ $informasi->isi_info }}</td>
-                        <td style="width: 15%">
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $informasi->judul_info }}</td>
+                        <td>{{ $informasi->category->nama_kategori }}</td>
+                        <td>
+                            <a href="/single_berita/{{ $informasi->id_informasi }}" class="btn btn-sm btn-cyan">Detail</a>
                             <a href="/informasi/{{ $informasi->id_informasi }}/edit" class="btn btn-sm btn-primary">Ubah</a>
                             <a href="/informasi/{{ $informasi->id_informasi }}/delete" onclick="return confirm('Apakah anda yakin ingin menghapus data?');" class="btn btn-sm btn-danger">Hapus</a>
                         </td>
@@ -74,7 +73,7 @@
         </button>
         </div>
         <div class="modal-body">
-            <form action="/informasi/create" method="post" enctype="multipart/form-data">
+            <form action="/informasi/create/{{ auth()->user()->admin->id }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="judul_info">Judul Informasi</label>
@@ -83,13 +82,25 @@
                     <div class="invalid-feedback">Judul Informasi Harus Diisi</div>
                     @endif
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="kategori">Kategori</label>
                     <select class="form-control {{ $errors->has('kategori') ? 'is-invalid' : '' }}" name="kategori" id="kategori">
                         <option value="">-- Pilih Kategori --</option>
                         <option value="wisata" {{ old('kategori') == 'wisata' ? 'selected' : '' }}>Wisata Alam</option>
                         <option value="penginapan" {{ old('kategori') == 'penginapan' ? 'selected' : '' }}>Penginapan</option>
                         <option value="berita" {{ old('kategori') == 'berita' ? 'selected' : '' }}>Berita</option>
+                    </select>
+                    @if($errors->has('kategori'))
+                        <div class="invalid-feedback">Kategori Harus Diisi</div>
+                    @endif
+                </div> --}}
+                <div class="form-group">
+                    <label for="kategori">Kategori</label>
+                    <select class="form-control {{ $errors->has('kategori') ? 'is-invalid' : '' }}" name="kategori" id="kategori">
+                        <option value="">-- Pilih Kategori --</option>
+                        @foreach ($kategori as $category)
+                        <option value="{{ $category->id }}" {{ old('kategori') == $category->id ? 'selected' : '' }}>{{ $category->nama_kategori }}</option>
+                        @endforeach
                     </select>
                     @if($errors->has('kategori'))
                         <div class="invalid-feedback">Kategori Harus Diisi</div>

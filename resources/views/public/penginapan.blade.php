@@ -43,36 +43,6 @@
 
 @section('container')
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="/asset/images/singgolom.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Desa Lintong Nihuta
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="nav-item active font-weight-bold">
-                <a class="nav-link" href="/penginapan"><i class="fas fa-hotel"></i> Penginapan</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/gallery"><i class="fas fa-images"></i> Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about"><i class="fas fa-users"></i> About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
-            </li>
-        </ul>
-    </div>
-</div>
-</nav>
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -98,6 +68,8 @@
     </a>
 </div>
 <div class="container mt-5">
+    <h1 class="heading-wisata">Informasi Penginapan</h1>
+    <hr width="500">
     @foreach ($penginapan as $info)
     <div class="row">
         <div class="col-lg-8 col-md-7">
@@ -118,21 +90,4 @@
 </div>
 @endsection
 @section('footer')
-    <script>
-    $(document).ready(function(){
-    $(window).scroll(function(){
-        var wintop = $(window).scrollTop();
-        if(wintop > 150){
-            $('nav').addClass('bg-dark');
-            $('nav a').addClass('text-white');
-        }
-        else{
-            $('nav').removeClass('bg-dark');
-            $('nav a').removeClass('text-white');
-        }
-    })
-})
-
-
-</script>
 @endsection

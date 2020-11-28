@@ -97,48 +97,72 @@
 @section('container')
 
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="/asset/images/singgolom.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Desa Lintong Nihuta
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/penginapan"><i class="fas fa-hotel"></i> Penginapan</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/gallery"><i class="fas fa-images"></i> Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about"><i class="fas fa-users"></i> About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
-            </li>
-        </ul>
-    </div>
-</div>
-</nav>
-
 <div class="container" style="margin-top: 80px; margin-bottom: 70px; margin-top: 150px;">
     <div class="row">
-        <div class="col-lg-6 col-md-5">
-            <h3>{{ $berita->judul_info }}</h3>
-            <small class="float-right">{{ $berita->updated_at->format('D, d/M/Y') }}</small>
+        <div class="col-md-6">
+            <h3 class="bold poppins">{{ $berita->judul_info }}</h3>
             <div style="clear: both"></div>
             <hr>
             <p>{!! $berita->isi_info !!}</p>
+            <div class="my-3">
+                <small class="info-posting">Diposting pada <b>{{ $berita->updated_at->format('d F Y') }}</b> | oleh <b>{{ $berita->admin->nama_admin }} </b> <br> Kategori: <b>{{ $berita->category->nama_kategori }}</b></small>
+            </div>
+            <div class="button-group">
+                {{-- <button class="btn btn-sm btn-dark"><i class="fas fa-thumbs-up"></i> Suka</button> --}}
+                <button class="btn btn-sm btn-dark" id="btn-komentar"><i class="fas fa-comment"></i> Komentar</button>
+                @if (session('sukses'))
+                <div class="alert alert-success">{{ session('sukses') }}</div>
+                @endif
+            </div>
+            <div class="my-3">
+                <form id="komentar" style="display: none" action="/komentar/{{ $berita->id_informasi }}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea name="alamat" placeholder="Masukkan Alamat Anda" class="form-control" id="alamat" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="komentar">Komentar</label>
+                        <textarea name="komentar" placeholder="Masukkan Komentar Anda" class="form-control" id="komentar" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary">Kirim komentar</button>
+                </form>
+            </div>
         </div>
-        <div class="col-lg-6 col-md-7">
-            <img class="single-image" src="/asset/images/{{ $berita->gambar_info }}" alt="404" width="100%">
+        <div class="col-md-6">
+            <img class="single-image" src="/asset/images/{{ $berita->gambar_info }}" alt="404" width="100%" height="400px">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="poppins bold">Daftar Komentar</h2>
+            <div class="divider"></div>
+            @foreach ($komentar as $comment)
+                <img src="/assets/images/users/1.JPG" class="rounded-circle" width="50" alt="sadahsdk">
+                <b class="my-3 poppins">{{ $comment->nama }}</b>
+                <p class="mt-3">{{ $comment->komentar }}</p>
+                <small class="poppins">{{ $comment->updated_at->diffForHumans() }}</small>
+                <b class="d-block mt-3 poppins">Balasan:</b>
+                @foreach ($comment->balasan_komentar as $balasan)
+                    <p class="d-inline">{{ $balasan->isi_balasan }}</p>
+                    <small class="float-right poppins">{{ $balasan->updated_at->diffForHumans() }}</small>
+                @endforeach
+                <hr>
+            @endforeach
+        </div>
+        <div class="col-md-6">
+            <h2 class="poppins bold">Kategori</h2>
+            <div class="divider"></div>
+            <div class="list-group">
+                @foreach ($kategori as $category)
+                    <a href="/allInformasi/{{ $category->id }}" class="poppins kategori-hover list-group-item list-group-item-action">{{ $category->nama_kategori }}</a>
+                @endforeach
+            </div>
         </div>
     </div>
 </div>
@@ -148,37 +172,11 @@
 <script src="/asset/js/lightbox-plus-jquery.min.js"></script>
 <script src="/asset/js/lightbox.js"></script>
 <script src="/package/js/swiper.js"></script>
-    <script>
+<script>
     $(document).ready(function(){
-    $(window).scroll(function(){
-        var wintop = $(window).scrollTop();
-        if(wintop > 150){
-            $('nav').addClass('bg-dark');
-            $('nav a').addClass('text-white');
-        }
-        else{
-            $('nav').removeClass('bg-dark');
-            $('nav a').removeClass('text-white');
-        }
+        $('#btn-komentar').click(function(){
+            $('#komentar').toggle('slideInDown');
+        })
     });
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-});
-
-
 </script>
 @endsection
