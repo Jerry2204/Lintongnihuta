@@ -8,12 +8,12 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/dashboard">
                         <!-- Logo icon -->
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../../asset/images/singgolom.jpeg" width="30" height="30" alt="homepage" class="light-logo" />
+                            <img src="../../asset/images/Logo trans.PNG" width="30" height="30" alt="homepage" class="light-logo" />
 
                         </b>
                         <!--End Logo icon -->

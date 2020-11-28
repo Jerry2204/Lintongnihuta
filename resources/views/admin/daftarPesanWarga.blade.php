@@ -25,7 +25,7 @@
                                     <div class="comment-footer">
                                         <span class="text-muted float-right">{{ $message->created_at->diffForHumans() }}</span>
                                         <a href="/balasPesanWarga/{{ $message->id }}" class="btn btn-cyan btn-sm">Balas</a>
-                                        <a href="/hapusPesanWarga/{{ $message->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                        <a href="/hapusPesanWarga/{{ $message->id }}" onclick="return confirm('Apakah anda yakin akan menghapus pesan ini?')" class="btn btn-danger btn-sm">Hapus</a>
                                     </div>
                                 </div>
                             </div>

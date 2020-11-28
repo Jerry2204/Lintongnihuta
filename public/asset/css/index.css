@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/sunset.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    user-select: none;
+    outline: none;
+}
+
+.form-login {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teks-welcome {
+    width: 100%;
+    text-align: center;
+}
+
+.teks-welcome span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px white;
+    user-select: none;
+}
+
+.grid-login {
+    width: 100%;
+    justify-content: center;
+}
+
+.template-login {
+    height: 500px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translate(40%);
+    border-radius: 0px 50px 0px 50px;
+    padding: 20px;
+}
+
+.judul-login {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.judul-login span {
+    font-size: 23px;
+}
+
+.username, .password {
+    margin-top: 30px;
+}
+
+.username p, .password p {
+    font-size: 13px;
+}
+
+.username input, .password input {
+    width: 90%;
+    border: none;
+    height: 30px;
+    background: none;
+    border-bottom: 0.5px solid gray;
+    padding-left: 20px;
+    outline: none;
+}
+
+.akunlog {
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-user, .fa-key {
+    position: absolute;
+    margin-top: 9px;
+}
+
+.tblLogin {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.tblLogin button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(to right, #252525 50%, #2F2F2F 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.tblLogin button:hover {
+    background-position: left bottom;
+}
+
+.show-password {
+    margin-top: 20px;
+}
+
+/* responsive */
+
+@media only screen and (max-width : 800px) {
+    .teks-welcome span {
+        font-size: 45px;
+        transition: .5s;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .form-login {
+        display: block;
+        transition: .5s;
+    }
+
+    .grid-login {
+        transform: translateY(20%);
+    }
+
+    .teks-welcome{
+        padding-top: 100px;
+    }
+
+}
+
+input::placeholder{
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

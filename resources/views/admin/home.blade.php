@@ -3,20 +3,25 @@
 @section('title', 'Admin')
 
 @section('header')
-    <style>
-        .card{
-            min-height: 0;
-        }
-        .wraper{
-            min-height: 600px;
-        }
-        .jumlah_heading{
-            color: white;
-        }
-    </style>
+@endsection
+@section('container')
+    <div class="page-wrapper">
+        <div>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2 class="text-center">Selamat Datang di Sistem Informasi Desa Lintong Nihuta</h2>
+                        </div>
+                        <img src="/asset/images/Logo Kami.png" class="d-block m-auto" width="550" alt="Brand Lintong Nihuta">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
-@section('container')
+{{-- @section('container')
     <div class="page-wrapper wraper">
         <div class="container-fluid">
             <div class="row">
@@ -75,10 +80,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}
 
 

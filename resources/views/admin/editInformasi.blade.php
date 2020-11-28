@@ -5,7 +5,7 @@
 @section('header')
     <style>
         .ck-editor__editable_inline {
-        min-height: 300px;
+            min-height: 300px;
         }
     </style>
 @endsection
@@ -32,9 +32,9 @@
                             <label for="kategori">Kategori</label>
                             <select class="form-control {{ $errors->has('kategori') ? 'is-invalid' : '' }}" name="kategori" id="kategori">
                                 <option value="">-- Pilih Kategori --</option>
-                                <option value="wisata" @if($informasi->kategori == 'wisata') {{ 'selected' }} @endif>Wisata Alam</option>
-                                <option value="penginapan" @if($informasi->kategori == 'penginapan') {{ 'selected' }} @endif>Penginapan</option>
-                                <option value="berita" @if($informasi->kategori == 'berita') {{ 'selected' }} @endif>Berita</option>
+                                @foreach ($kategori as $category)
+                                <option value="{{ $category->id }}" {{ $informasi->category_id == $category->id ? 'selected' : '' }}>{{ $category->nama_kategori }}</option>
+                                @endforeach
                             </select>
                             @if($errors->has('kategori'))
                                 <div class="invalid-feedback">Kategori Harus Diisi</div>

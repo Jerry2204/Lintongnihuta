@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
-                            <h2 class="text-center">Daftar Admin</h2>
+                            <h2>Daftar Admin</h2>
                             @if(session('sukses'))
                             {{ session('sukses') }}
                             @endif

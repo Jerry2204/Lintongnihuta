@@ -9,6 +9,9 @@ use App\Pesan;
 use App\User;
 use App\Warga;
 use App\Admin;
+use App\Category;
+use App\Kades;
+use App\Sejarah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -94,17 +97,19 @@ class PagesController extends Controller
 
     public function admin()
     {
-        $jlh_warga = Warga::count();
-        $jlh_admin = Admin::count();
-        $jlh_wisata = Informasi::where('kategori', 'wisata')->count();
-        $jlh_berita = Informasi::where('kategori', 'berita')->count();
-        $jlh_penginapan = Informasi::where('kategori', 'penginapan')->count();
-        return view('admin.home', compact('jlh_warga', 'jlh_wisata', 'jlh_admin', 'jlh_penginapan', 'jlh_berita'));
+        // $jlh_warga = Warga::count();
+        // $jlh_admin = Admin::count();
+        // $jlh_wisata = Informasi::where('kategori', 'wisata')->count();
+        // $jlh_berita = Informasi::where('kategori', 'berita')->count();
+        // $jlh_penginapan = Informasi::where('kategori', 'penginapan')->count();
+        return view('admin.home');
     }
 
     public function about()
     {
-        return view('public.about');
+        $perangkat_desa = Kades::orderBy('id', 'desc')->limit(1)->get();
+        $sejarah = Sejarah::orderBy('id', 'desc')->limit(1)->get();
+        return view('public.about', compact('perangkat_desa', 'sejarah'));
     }
 
     public function daftarWarga(){
@@ -114,7 +119,8 @@ class PagesController extends Controller
     public function informasi()
     {
         $info = Informasi::all();
-        return view('admin.informasi', ['info' => $info]);
+        $kategori = Category::all();
+        return view('admin.informasi', compact('info', 'kategori'));
     }
 
     public function listKomentar()

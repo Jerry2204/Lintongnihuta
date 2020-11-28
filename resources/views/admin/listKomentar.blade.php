@@ -23,7 +23,7 @@
                                 <div class="comment-footer">
                                     <span class="text-muted float-right">{{ $comment->updated_at->diffForHumans() }}</span>
                                     <a href="/balasKomentar/{{ $comment->id }}" class="btn btn-success btn-sm">Balas</a>
-                                    <a href="/Komentar/{{ $comment->id }}/hapus" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/Komentar/{{ $comment->id }}/hapus" onclick="return confirm('Apakah anda yakin akan menghapus komentar ini?')" class="btn btn-danger btn-sm">Hapus</a>
                                 </div>
                                 <hr>
                                 <b>Balasan:</b>
@@ -31,7 +31,7 @@
                                 <div class="comment-footer">
                                 <span class="text-muted float-right">{{ $balasan->updated_at->diffForHumans() }}</span>
                                 <span class="m-b-15 d-block">{{ $balasan->isi_balasan }}</span>
-                                <a href="/balasanKomentar/{{ $balasan->id }}/hapus" class="btn btn-danger btn-sm">Hapus</a>
+                                <a href="/balasanKomentar/{{ $balasan->id }}/hapus" onclick="return confirm('Apakah anda yakin akan menghapus balasan komentar ini?')" class="btn btn-danger btn-sm">Hapus</a>
                                 </div>
                                 @endforeach
                             </div>

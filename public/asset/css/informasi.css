@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .informasi img{
     transition: .5s;
+}
+
+.nav-link{
+    font-family: 'Poppins';
+}
+
+.poppins{
+    font-family: 'Poppins';
 }
 
 .informasi img:hover{
@@ -13,7 +21,7 @@
     background-image: url(/asset/images/danau.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 630px;
+    min-height: 500px;
 }
 
 
@@ -98,6 +106,7 @@ nav{
     background-color: red;
 }
 
+
 body {
 background: #fff;
 font-size: 14px;
@@ -106,10 +115,13 @@ margin: 0;
 padding: 0;
 }
 
+.info-posting{
+    font-family: 'Poppins';
+}
+
 p{
-    font-family: Poppins;
-    letter-spacing: 1px;
-    text-indent: 30px;
+    font-family: 'Poppins';
+    text-align: justify;
 }
 
 .wave{
@@ -119,8 +131,44 @@ left: 0;
 }
 
 .teks-info{
-    font-family: Poppins;
-    letter-spacing: 1px;
+    font-family: 'Poppins';
+}
+
+.info-panel{
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -50px;
+    padding: 30px;
+}
+
+.info-panel img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.info-panel h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Poppins';
+    margin-top: 5px;
+}
+
+.info-panel p{
+    font-size: 14px;
+    color: #acacac;
+    margin-top: -5px;
+}
+
+.info-panel .link-panel{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 25px;
 }
 
 /* Single Post */
@@ -135,12 +183,13 @@ left: 0;
 .heading-wisata{
     text-transform: uppercase;
     font-size: 2rem;
-    font-weight: 500;
+    font-family: 'Poppins';
+    font-weight: 700;
     letter-spacing: 3px;
     margin-right: -3px;
     margin-bottom: 5rem;
     text-align: center;
-    color: #333;
+    color: #000;
     position: relative;
 }
 
@@ -168,6 +217,6 @@ left: 0;
     }
 
     .div-footer{
-        border-right: 2px solid black;
+        border-right: 0px solid black;
     }
 }
