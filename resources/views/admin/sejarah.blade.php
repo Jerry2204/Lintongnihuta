@@ -42,7 +42,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{!! Str::words($history->sejarah, 15) !!}</td>
                                     <td>
-                                        <a href="/about" class="btn btn-sm btn-cyan">Detail</a>
+                                        <a href="/about" target="_blank" class="btn btn-sm btn-cyan">Detail</a>
                                         <a href="/sejarah/{{ $history->id }}" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="/sejarah/{{ $history->id }}/delete" onclick="return confirm('Apakah anda yakin akan menghapus informasi ini?')" class="btn btn-sm btn-danger">Hapus</a>
                                     </td>

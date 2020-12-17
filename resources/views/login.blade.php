@@ -58,6 +58,7 @@
                         </div>
                         <div class="tblLogin">
                             <button type="submit">LOGIN</button>
+                            <a href="/" class="mt-3" type="submit">Kembali</a>
                         </div>
                     </div>
                 </div>

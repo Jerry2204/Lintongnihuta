@@ -8,11 +8,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body table-responsive">
                         <div class="card-title">
                             <h2>Daftar Admin</h2>
                             @if(session('sukses'))
-                            {{ session('sukses') }}
+                            <div class="alert alert-success">{{ session('sukses') }}</div>
                             @endif
                         </div>
                         <table class="table table-striped" id="data-table">

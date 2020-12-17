@@ -108,9 +108,32 @@ body {
     background-position: right bottom;
     transition: all .5s ease-out;
 }
+.tblLogin a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(to right, #252525 50%, #2F2F2F 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
 
 .tblLogin button:hover {
     background-position: left bottom;
+}
+
+.tblLogin a:hover {
+    background-position: left bottom;
+    text-decoration: none;
+    color: white;
 }
 
 .show-password {

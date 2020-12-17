@@ -50,7 +50,7 @@
                         <td>{{ $informasi->judul_info }}</td>
                         <td>{{ $informasi->category->nama_kategori }}</td>
                         <td>
-                            <a href="/single_berita/{{ $informasi->id_informasi }}" class="btn btn-sm btn-cyan">Detail</a>
+                            <a href="/single_berita/{{ $informasi->id_informasi }}"  target="_blank" class="btn btn-sm btn-cyan">Detail</a>
                             <a href="/informasi/{{ $informasi->id_informasi }}/edit" class="btn btn-sm btn-primary">Ubah</a>
                             <a href="/informasi/{{ $informasi->id_informasi }}/delete" onclick="return confirm('Apakah anda yakin ingin menghapus data?');" class="btn btn-sm btn-danger">Hapus</a>
                         </td>

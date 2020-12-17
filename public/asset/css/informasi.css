@@ -171,6 +171,12 @@ left: 0;
     margin-top: 25px;
 }
 
+/* Link Terkait */
+
+.link_terkait{
+    color: black;
+}
+
 /* Single Post */
 
 .single-image{

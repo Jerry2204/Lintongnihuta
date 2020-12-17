@@ -8,3 +8,13 @@
     font-family: Viga;
     letter-spacing: 4px;
 }
+
+.gambar_dashboard{
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .gambar_dashboard{
+        width: 550px;
+    }
+}
