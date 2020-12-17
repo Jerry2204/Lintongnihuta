@@ -72,10 +72,10 @@
             <div class="col-lg-3 div-footer">
                 <h5 class="teks-info font-weight-bold">Link Terkait</h5>
                 <div class="divider-footer"></div>
-                <a class="teks-info d-block font-weight-bold mb-2" href="https://kemenparekraf.go.id/">Kementrian Pariwisata dan Ekonomi Kreatif</a>
-                <a class="teks-info d-block font-weight-bold mb-2" href="https://www.sumutprov.go.id/">Pemerintah Provinsi Sumatera Utara</a>
-                <a class="teks-info d-block font-weight-bold mb-2" href="http://www.tobasamosirkab.go.id/">Pemerintah Kabupaten Toba</a>
-                <a class="teks-info d-block font-weight-bold mb-2" href="http://www.del.ac.id/">Institut Teknologi Del</a>
+                <a class="teks-info d-block font-weight-bold mb-2 link_terkait target="_blank"" href="https://kemenparekraf.go.id/">Kementrian Pariwisata dan Ekonomi Kreatif</a>
+                <a class="teks-info d-block font-weight-bold mb-2 link_terkait" target="_blank" href="https://www.sumutprov.go.id/">Pemerintah Provinsi Sumatera Utara</a>
+                <a class="teks-info d-block font-weight-bold mb-2 link_terkait" target="_blank" href="http://www.tobasamosirkab.go.id/">Pemerintah Kabupaten Toba</a>
+                <a class="teks-info d-block font-weight-bold mb-2 link_terkait" target="_blank" href="http://www.del.ac.id/">Institut Teknologi Del</a>
             </div>
             <div class="col-lg-6">
                 <iframe style="border-radius: 20px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15946.005507766498!2d99.01203721935416!3d2.336469912711451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e04b6dbeff77f%3A0x76c79b4904edc93d!2sLintong%20Nihuta%2C%20Tampahan%2C%20Kabupaten%20Toba%20Samosir%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1587923737165!5m2!1sid!2sid" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

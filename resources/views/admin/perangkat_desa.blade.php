@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <div class="card-title">
                         <h2>Perangkat Desa</h2>
                         @if(session('sukses'))

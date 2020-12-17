@@ -13,7 +13,7 @@
                         <div class="card-title">
                             <h2 class="text-center">Selamat Datang di Sistem Informasi Desa Lintong Nihuta</h2>
                         </div>
-                        <img src="/asset/images/Logo Kami.png" class="d-block m-auto" width="550" alt="Brand Lintong Nihuta">
+                        <img src="/asset/images/Logo Kami.png" class="d-block m-auto gambar_dashboard" alt="Brand Lintong Nihuta">
                     </div>
                 </div>
             </div>

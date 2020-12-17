@@ -14,7 +14,7 @@
                             <div class="alert alert-danger">{{ session('gagal') }}</div>
                             @endif
                             @if(session('sukses'))
-                            <div class="alert alert-danger">{{ session('sukses') }}</div>
+                            <div class="alert alert-success">{{ session('sukses') }}</div>
                             @endif
                         </div>
                         <form action="/biodataWarga/{{ auth()->user()->warga->id }}/add" method="post" enctype="multipart/form-data">

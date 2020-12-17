@@ -41,8 +41,8 @@ class CategoryController extends Controller
     }
 
     public function delete(Category $kategori){
-        $kategori->delete();
-
+        $kategori->informasi()->forceDelete();
+        $kategori->delete($kategori);
         return back()->with('sukses', 'Data berhasil dihapus');
     }
 }

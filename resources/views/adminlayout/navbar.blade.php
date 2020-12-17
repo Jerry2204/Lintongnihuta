@@ -71,7 +71,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/accountSetting/{{ auth()->user()->id }}"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                <a class="dropdown-item" href="/logout" onclick="return confirm('Apakah anda yakin ingin keluar?')"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                                 <div class="dropdown-divider"></div>
                                 @if(auth()->user()->status == 'warga')
                                 <div class="p-l-30 p-10"><a href="/profile/{{ auth()->user()->warga->id }}" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
